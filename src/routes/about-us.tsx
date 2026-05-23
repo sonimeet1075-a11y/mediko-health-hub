@@ -107,8 +107,8 @@ function AboutPage() {
       <section className="bg-[var(--color-section)] section-y">
         <div className="container-x grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
-            <img src="https://placehold.co/500x400/d0e8ff/3d68f5?text=Mediko+Care" alt="" className="rounded-2xl w-full" />
-            <img src="https://placehold.co/320x230/f0f8ff/3d68f5?text=Mission" alt="" className="absolute -bottom-10 -right-4 sm:right-4 w-2/3 rounded-2xl border-4 border-white shadow-xl" />
+            <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1000&q=80" alt="" className="rounded-2xl w-full" />
+            <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=900&q=80" alt="" className="absolute -bottom-10 -right-4 sm:right-4 w-2/3 rounded-2xl border-4 border-white shadow-xl" />
           </div>
           <div>
             <SectionLabel>About Mediko</SectionLabel>
@@ -126,7 +126,7 @@ function AboutPage() {
 
       <section className="section-y">
         <div className="container-x grid lg:grid-cols-2 gap-12 items-center">
-          <img src="https://placehold.co/560x460/e8f0ff/3d68f5?text=App+Features" alt="" className="rounded-2xl w-full" />
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80" alt="" className="rounded-2xl w-full" />
           <div>
             <SectionLabel>Application Features</SectionLabel>
             <h2 className="h2">Innovative Healthcare Solutions for a Better Future</h2>
@@ -172,8 +172,8 @@ function AboutPage() {
             </div>
           </div>
           <div className="relative">
-            <img src="https://placehold.co/500x380/d0e8ff/3d68f5?text=Support+1" alt="" className="rounded-2xl w-full" />
-            <img src="https://placehold.co/300x220/f0f8ff/3d68f5?text=Support+2" alt="" className="absolute -bottom-8 -left-4 sm:left-0 w-2/3 rounded-2xl border-4 border-white shadow-xl" />
+            <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=1000&q=80" alt="" className="rounded-2xl w-full" />
+            <img src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=900&q=80" alt="" className="absolute -bottom-8 -left-4 sm:left-0 w-2/3 rounded-2xl border-4 border-white shadow-xl" />
           </div>
         </div>
       </section>

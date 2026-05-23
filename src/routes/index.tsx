@@ -27,14 +27,18 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-white overflow-hidden">
-        <div className="absolute inset-0 dot-grid opacity-60" />
+      <section className="relative overflow-hidden hero-surface">
+        <div className="absolute inset-0 hero-dots" />
+        <div className="absolute -left-24 -top-24 w-[420px] h-[420px] rounded-full bg-[var(--color-brand)]/10 blur-3xl" />
+        <div className="absolute -right-24 top-10 w-[520px] h-[520px] rounded-full bg-[var(--color-brand)]/10 blur-3xl" />
         <div className="container-x relative pt-16 pb-32 lg:pt-24 lg:pb-44 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-50 text-[var(--color-danger)] text-sm font-semibold pulse-ring">
               <span className="w-2 h-2 rounded-full bg-[var(--color-danger)]" /> Emergency
             </span>
-            <h1 className="h1 mt-5 animate-fade-up" style={{ color: "#1a1a1a" }}>Enhancing Lives, Reviving Health for Better Tomorrow.</h1>
+            <h1 className="h1 mt-5 animate-fade-up" style={{ color: "#1a1a1a" }}>
+              Enhancing Lives, Reviving <span className="text-[var(--color-brand)]">Health</span> for Better Tomorrow.
+            </h1>
             <p className="mt-5 max-w-xl animate-fade-up" style={{ animationDelay: "150ms" }}>
               Discover a world of holistic healthcare where your well-being comes first. At Mediko, we deliver personalized, compassionate medical services designed to support every stage of your life.
             </p>
@@ -50,9 +54,10 @@ function Home() {
             </div>
           </div>
           <div className="relative animate-slide-right">
-            <div className="absolute inset-0 m-auto w-[90%] aspect-square rounded-full bg-[var(--color-accent)]" />
-            <div className="absolute inset-4 m-auto w-[80%] aspect-square rounded-full border-2 border-dashed border-[var(--color-brand)]/30" />
-            <img src="https://placehold.co/520x580/e8f0ff/3d68f5?text=Doctor" alt="Mediko doctor" className="relative mx-auto max-h-[580px] object-contain" />
+            <div className="absolute inset-0 m-auto w-[92%] aspect-square rounded-full bg-[var(--color-accent)]" />
+            <div className="absolute inset-6 m-auto w-[78%] aspect-square rounded-full border-2 border-dashed border-[var(--color-brand)]/25" />
+            <div className="absolute -right-6 top-6 w-24 h-24 rounded-full border border-[var(--color-brand)]/30" />
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80" alt="Mediko doctor" className="relative mx-auto max-h-[620px] object-contain" />
             <div className="absolute bottom-6 -left-2 sm:left-0 bg-white/90 backdrop-blur rounded-2xl shadow-xl p-4 flex items-center gap-3 float-slow">
               <span className="w-10 h-10 rounded-full bg-[var(--color-accent)] flex items-center justify-center"><CheckCircle2 className="w-5 h-5 text-[var(--color-brand)]" /></span>
               <div>
@@ -75,13 +80,13 @@ function Home() {
       <section className="relative -mt-20 lg:-mt-24 z-10">
         <div className="container-x grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {quickCards.map(({ icon: I, title, text }) => (
-            <div key={title} className="bg-white border-l-4 border-[var(--color-brand)] rounded-2xl shadow-[0_4px_30px_rgba(61,104,245,0.08)] p-6 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(61,104,245,0.16)] transition group">
-              <div className="w-12 h-12 rounded-xl bg-[var(--color-section)] group-hover:bg-[var(--color-brand)] flex items-center justify-center transition">
-                <I className="w-6 h-6 text-[var(--color-brand)] group-hover:text-white transition" />
+            <div key={title} className="quick-card bg-white border-l-4 border-[var(--color-brand)] rounded-2xl shadow-[0_4px_30px_rgba(61,104,245,0.08)] p-6 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(61,104,245,0.16)] transition group">
+              <div className="w-12 h-12 rounded-xl bg-[var(--color-section)] group-hover:bg-white flex items-center justify-center transition">
+                <I className="w-6 h-6 text-[var(--color-brand)] transition" />
               </div>
-              <h3 className="h4 mt-4">{title}</h3>
-              <p className="mt-2 text-[15px]">{text}</p>
-              <Link to="/contact-us" className="mt-3 inline-flex items-center gap-1 text-[var(--color-brand)] font-semibold text-sm">Learn More <ArrowRight className="w-4 h-4" /></Link>
+              <h3 className="h4 mt-4 group-hover:text-white">{title}</h3>
+              <p className="mt-2 text-[15px] group-hover:text-white/90">{text}</p>
+              <Link to="/contact-us" className="mt-3 inline-flex items-center gap-1 text-[var(--color-brand)] font-semibold text-sm group-hover:text-white">Learn More <ArrowRight className="w-4 h-4" /></Link>
             </div>
           ))}
         </div>
@@ -91,9 +96,14 @@ function Home() {
       <section className="section-y">
         <div className="container-x grid lg:grid-cols-2 gap-14 items-center">
           <div className="relative">
-            <img src="https://placehold.co/500x380/d0e8ff/3d68f5?text=Doctor+Consultation" alt="" className="rounded-2xl w-full" />
-            <img src="https://placehold.co/320x230/f0f8ff/3d68f5?text=Team" alt="" className="absolute -bottom-10 -right-4 sm:right-4 w-2/3 rounded-2xl border-4 border-white shadow-xl" />
-            <div className="absolute -top-4 -left-4 bg-[var(--color-ink)] text-white px-5 py-4 rounded-xl text-sm font-bold uppercase tracking-wider shadow-xl">24/7 Emergency<br/>Patient Support</div>
+            <div className="rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(2,15,51,0.12)]">
+              <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1000&q=80" alt="" className="w-full" />
+            </div>
+            <div className="relative mt-6 lg:mt-0 lg:absolute lg:-right-10 lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-[46%]">
+              <div className="rounded-3xl overflow-hidden border-4 border-white shadow-xl">
+                <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=900&q=80" alt="" className="w-full" />
+              </div>
+            </div>
           </div>
           <div>
             <SectionLabel>About Mediko</SectionLabel>
@@ -128,7 +138,7 @@ function Home() {
           <div>
             <SectionLabel>Affordable Lab Test Rates</SectionLabel>
             <h2 className="h2">We Have Lab Test Facilities, So Book Yours Today!</h2>
-            <img src="https://placehold.co/520x420/e8f0ff/3d68f5?text=Lab+Facility" alt="" className="mt-8 rounded-2xl w-full" />
+            <img src="https://images.unsplash.com/photo-1581091012184-5c7a5f6b924a?auto=format&fit=crop&w=1000&q=80" alt="" className="mt-8 rounded-2xl w-full" />
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
             {labTests.map((t) => (

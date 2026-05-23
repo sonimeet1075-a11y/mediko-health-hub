@@ -65,13 +65,13 @@ export function ServicesSection() {
           {four.map((s) => {
             const I = iconMap[s.icon];
             return (
-              <Link key={s.slug} to="/services/$slug" params={{ slug: s.slug }} className="group bg-white rounded-2xl p-7 border-t-4 border-transparent hover:border-[var(--color-brand)] transition-all hover:-translate-y-1">
-                <div className="w-14 h-14 rounded-xl bg-[var(--color-section)] group-hover:bg-[var(--color-brand)] flex items-center justify-center transition">
-                  <I className="w-7 h-7 text-[var(--color-brand)] group-hover:text-white transition" />
+              <Link key={s.slug} to="/services/$slug" params={{ slug: s.slug }} className="service-card group bg-white rounded-2xl p-7 border-t-4 border-transparent hover:border-[var(--color-brand)] transition-all hover:-translate-y-1">
+                <div className="w-14 h-14 rounded-xl bg-[var(--color-section)] group-hover:bg-white flex items-center justify-center transition">
+                  <I className="w-7 h-7 text-[var(--color-brand)] transition" />
                 </div>
-                <h3 className="h4 mt-5">{s.name}</h3>
-                <p className="mt-2 text-[15px]">{s.desc}</p>
-                <span className="mt-5 inline-flex items-center gap-1 text-[var(--color-brand)] font-semibold">Learn More <ArrowRight className="w-4 h-4" /></span>
+                <h3 className="h4 mt-5 group-hover:text-white">{s.name}</h3>
+                <p className="mt-2 text-[15px] group-hover:text-white/90">{s.desc}</p>
+                <span className="mt-5 inline-flex items-center gap-1 text-[var(--color-brand)] font-semibold group-hover:text-white">Learn More <ArrowRight className="w-4 h-4" /></span>
               </Link>
             );
           })}
@@ -118,7 +118,7 @@ export function Testimonials() {
         </div>
         <div className="relative">
           <div className="relative rounded-2xl overflow-hidden">
-            <img src="https://placehold.co/600x400/1a3a6b/ffffff?text=Watch+Patient+Story" alt="Patient story video" className="w-full" />
+            <img src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?auto=format&fit=crop&w=1200&q=80" alt="Patient story video" className="w-full" />
             <button onClick={() => setShowVideo(true)} className="absolute inset-0 flex items-center justify-center" aria-label="Play video">
               <span className="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-2xl hover:scale-110 transition pulse-ring">
                 <Play className="w-8 h-8 text-[var(--color-brand)] fill-[var(--color-brand)] ml-1" />
@@ -140,7 +140,7 @@ export function Testimonials() {
         <div className="fixed inset-0 z-[200] bg-black/80 flex items-center justify-center p-4" onClick={() => setShowVideo(false)}>
           <button className="absolute top-6 right-6 text-white" onClick={() => setShowVideo(false)} aria-label="Close"><X className="w-8 h-8" /></button>
           <div className="w-full max-w-3xl aspect-video bg-black rounded-xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
-            <iframe className="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Patient story" allow="autoplay; encrypted-media" allowFullScreen />
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/X9J2ea8iNnM" title="Patient story" allow="autoplay; encrypted-media" allowFullScreen />
           </div>
         </div>
       )}
@@ -255,7 +255,7 @@ export function FeaturedDoctorBanner() {
         </div>
         <div className="relative flex justify-center">
           <div className="absolute inset-0 m-auto w-80 h-80 rounded-full bg-[var(--color-brand)]/30 blur-3xl" />
-          <img src="https://placehold.co/400x500/1a3a6b/ffffff?text=Dr.+Rasika" alt="Dr. Rasika" className="relative rounded-2xl max-h-[500px]" />
+          <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=900&q=80" alt="Dr. Rasika" className="relative rounded-2xl max-h-[500px]" />
         </div>
       </div>
     </section>

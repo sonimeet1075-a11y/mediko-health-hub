@@ -160,6 +160,66 @@
     background-image: radial-gradient(rgba(61,104,245,.18) 1px, transparent 1px);
     background-size: 22px 22px;
   }
+
+  .hero-surface {
+    background: linear-gradient(180deg, #f5fafe 0%, #ffffff 70%);
+  }
+
+  .hero-dots {
+    background-image: radial-gradient(rgba(61,104,245,.14) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.55;
+  }
+
+  .quick-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .quick-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-brand);
+    transform: scale(0);
+    transform-origin: top left;
+    transition: transform 0.35s ease;
+    z-index: 0;
+  }
+
+  .quick-card:hover::before {
+    transform: scale(1);
+  }
+
+  .quick-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-brand);
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 0.35s ease;
+    z-index: 0;
+  }
+
+  .service-card:hover::before {
+    transform: scale(1);
+  }
+
+  .service-card > * {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 @keyframes float-y { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-10px);} }
